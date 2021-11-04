@@ -22,6 +22,7 @@ var LinkedList = /** @class */ (function () {
         while (tail.next) {
             tail = tail.next;
         }
+        tail.next = node;
     };
     Object.defineProperty(LinkedList.prototype, "length", {
         get: function () {

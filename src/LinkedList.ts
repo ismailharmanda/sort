@@ -19,6 +19,8 @@ export class LinkedList {
     while (tail.next) {
       tail = tail.next;
     }
+
+    tail.next = node;
   }
 
   get length(): number {
@@ -32,6 +34,7 @@ export class LinkedList {
       length++;
       node = node.next;
     }
+
     return length;
   }
 
@@ -46,15 +49,19 @@ export class LinkedList {
       if (counter === index) {
         return node;
       }
+
       counter++;
       node = node.next;
     }
+
     throw new Error("Index out of bounds");
   }
+
   compare(leftIndex: number, rightIndex: number): boolean {
     if (!this.head) {
       throw new Error("List is empty");
     }
+
     return this.at(leftIndex).data > this.at(rightIndex).data;
   }
 
@@ -66,10 +73,12 @@ export class LinkedList {
     leftNode.data = rightNode.data;
     rightNode.data = leftHand;
   }
+
   print(): void {
     if (!this.head) {
       return;
     }
+
     let node: Node | null = this.head;
     while (node) {
       console.log(node.data);
