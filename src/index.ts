@@ -22,4 +22,4 @@ linkedList.add(4);
 
 const sorter = new Sorter(linkedList);
 sorter.sort();
-console.log(linkedList);
+linkedList.print();

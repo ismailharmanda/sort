@@ -18,4 +18,4 @@ linkedList.add(-3);
 linkedList.add(4);
 var sorter = new Sorter_1.Sorter(linkedList);
 sorter.sort();
-console.log(linkedList);
+linkedList.print();
